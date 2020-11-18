@@ -1,7 +1,9 @@
 <?php
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+
 class CreatePatientsTable extends Migration
 {
     /**
@@ -21,9 +23,12 @@ class CreatePatientsTable extends Migration
             $table->char('Gender');
             $table->mediumText('Comments')->nullable();
             $table->timestamps();
+
             $table->primary('NationalID');
+
         });
     }
+
     /**
      * Reverse the migrations.
      *

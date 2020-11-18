@@ -1,7 +1,9 @@
 <?php
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+
 class CreateSurgeryReservationsTable extends Migration
 {
     /**
@@ -30,12 +32,15 @@ class CreateSurgeryReservationsTable extends Migration
             $table->integer('createdBy')->unsigned()->nullable();
             $table->integer('updatedBy')->unsigned()->nullable();
             $table->timestamps();
+
             $table->foreign('Hospitalid')->references('id')->on('hospitals');
             $table->foreign('patientID')->references('NationalID')->on('patients');
             $table->foreign('createdBy')->references('id')->on('users');
             $table->foreign('updatedBy')->references('id')->on('users');
+
         });
     }
+
     /**
      * Reverse the migrations.
      *

@@ -1,7 +1,9 @@
 <?php
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+
 class CreateHospitalTelephoneNumbersTable extends Migration
 {
     /**
@@ -18,8 +20,10 @@ class CreateHospitalTelephoneNumbersTable extends Migration
             
             $table->foreign('Hospitalid')->references('id')->on('hospitals');
             $table->primary(array('Hospitalid', 'Telephone_Number'));
+
         });
     }
+
     /**
      * Reverse the migrations.
      *

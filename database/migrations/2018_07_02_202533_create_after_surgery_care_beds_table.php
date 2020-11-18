@@ -1,7 +1,9 @@
 <?php
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+
 class CreateAfterSurgeryCareBedsTable extends Migration
 {
     /**
@@ -25,6 +27,7 @@ class CreateAfterSurgeryCareBedsTable extends Migration
             $table->primary(array('BedId', 'HospitalID'));
         });
     }
+
     /**
      * Reverse the migrations.
      *

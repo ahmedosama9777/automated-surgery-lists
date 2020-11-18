@@ -1,7 +1,9 @@
 <?php
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+
 class CreateUserHospitalsTable extends Migration
 {
     /**
@@ -15,11 +17,13 @@ class CreateUserHospitalsTable extends Migration
             $table->integer('userId')->unsigned();
             $table->integer('hospitalId')->unsigned();          
             $table->timestamps();
+
             $table->foreign('userId')->references('id')->on('users');
             $table->foreign('hospitalId')->references('id')->on('hospitals');
             $table->primary(array('userId', 'hospitalId'));
         });
     }
+
     /**
      * Reverse the migrations.
      *

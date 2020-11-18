@@ -1,7 +1,9 @@
 <?php
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+
 class CreateNursingStaffsTable extends Migration
 {
     /**
@@ -18,9 +20,11 @@ class CreateNursingStaffsTable extends Migration
             $table->string('Profession');
             $table->boolean('currentlyAvailable');
             $table->timestamps();
+
             $table->foreign('Hospitalid')->references('id')->on('hospitals');
         });
     }
+
     /**
      * Reverse the migrations.
      *

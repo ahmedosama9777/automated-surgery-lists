@@ -1,7 +1,9 @@
 <?php
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+
 class CreatePatientInquiriesTable extends Migration
 {
     /**
@@ -21,8 +23,10 @@ class CreatePatientInquiriesTable extends Migration
           
             $table->foreign('PatientNationalID')->references('NationalID')->on('patients');
             $table->foreign('Hospitalid')->references('id')->on('hospitals');
+
         });
     }
+
     /**
      * Reverse the migrations.
      *
